@@ -1,3 +1,7 @@
+/*
+Author:Vinayak agrawal
+vinayakagrawal88@gmail.com
+*/
 package reader;
 import java.io.*;
 import java.util.*;
@@ -11,11 +15,12 @@ import org.apache.log4j.Logger;
 import org.apache.solr.client.solrj.SolrServerException;
 
 import SolrIndexer.MyIndexer;
+//Code to read HDFS files from Hadoop environment
 public class FileReader {
 	static List  <RecordGen> mylist = new ArrayList<RecordGen>();
 	        public static void main (String [] args) throws Exception{
 	        	
-	                try{
+	                try{ // Change the file path to the file you want to read This is a tab separated file. 
 	                        Path pt=new Path("hdfs://bigdata.ibm.com:9000/user/vin/EVALTECHNICALFUNCTION_head_t.tab");
 	                        Configuration conf = new Configuration();
 	                       conf.addResource(new Path("/opt/ibm/biginsights/hadoop-conf/core-site.xml"));

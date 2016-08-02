@@ -1,3 +1,7 @@
+/*
+Author:Vinayak Agrawal
+vinayakagrawal88@gmail.com
+*/
 package SolrIndexer;
 import org.apache.hadoop.metrics2.util.MetricsCache.Record;
 import org.apache.solr.client.solrj.SolrServerException;
@@ -11,12 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 public class MyIndexer {
 
-
+// Class to Index data into Solr
 	  public void Indexing (List<RecordGen> recordlist)throws IOException, SolrServerException {
 	    HttpSolrServer server = new HttpSolrServer("http://localhost:8983/solr/test_core");
 	    int i=10000;
 	    for(RecordGen record:recordlist) {
-	    	
+	    // Create a Solr document with fields specified to be indexed	
 	      SolrInputDocument doc = new SolrInputDocument();
 	      doc.addField("id", "record-" + i);
 	      doc.addField("report_key", record.getRK_REPORTKEY());

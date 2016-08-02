@@ -1,5 +1,5 @@
 package reader;
-
+//Setter and getter class for the fields in the text file
 public class RecordGen {
 		String RK_REPORTKEY;
 		String EVTF_BASICOPERATIONNO;
